@@ -18,7 +18,6 @@ const backgroundColors = {
     high: 'rgba(255, 50, 20,0.6)',
     medium: 'rgba(255, 165, 0, 0.6) ',
     low: 'rgba(10, 100, 158, 0.65) ',
-    nopriority: 'rgba(35,35,35,1)'
   }
 
   export default backgroundColors;

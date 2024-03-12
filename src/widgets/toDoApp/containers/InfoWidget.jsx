@@ -36,7 +36,7 @@ const InfoWidget = () => {
     };
 
     fetchData();
-  }, [userLocation]);
+  }, [userLocation, apiKey]);
 
   return (
     <div className={styles.info_widget_container}>

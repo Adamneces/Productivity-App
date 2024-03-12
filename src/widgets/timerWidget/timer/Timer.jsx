@@ -111,7 +111,7 @@ const Timer = () => {
     }
 
     return () => clearInterval(interval);
-  }, [timerStats, work]);
+  }, [timerStats, work, audio, handleTimerReset, initialValues.timer, setTimerStats]);
 
   return (
     <div className={styles.timer_container}>

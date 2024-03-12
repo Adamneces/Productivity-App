@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "../TimerWidget.module.css";
 import SelectDropdown from "../timer/components/SelectDropDown";
-import { sixtyArray, hoursArray } from "../utilities/utilities.js";
+import { sixtyArray } from "../utilities/utilities.js";
 import Button from "../UI/Button.jsx";
 
 import TimerContext from "../store/TimerContext.jsx";
@@ -90,7 +90,7 @@ const BreakTimer = () => {
     }
 
     return () => clearInterval(interval);
-  }, [breakTime, timerStats]);
+  }, [breakTime, timerStats, audio, handleBreakReset, initialValues.break, setTimerStats]);
 
   return (
     <div className={styles.break_timer_container}>
