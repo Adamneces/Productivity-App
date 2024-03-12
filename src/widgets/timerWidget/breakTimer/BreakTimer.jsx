@@ -90,7 +90,7 @@ const BreakTimer = () => {
     }
 
     return () => clearInterval(interval);
-  }, [breakTime, timerStats, audio, handleBreakReset, initialValues.break, setTimerStats]);
+  }, [breakTime, timerStats, handleBreakReset, initialValues.break, setTimerStats]);
 
   return (
     <div className={styles.break_timer_container}>
