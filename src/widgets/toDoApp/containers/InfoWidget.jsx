@@ -9,7 +9,7 @@ const InfoWidget = () => {
   const [weatherData, setWeatherData] = useState(null);
 
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
-  const baseUrl = "http://api.weatherapi.com/v1";
+  const baseUrl = "https://api.weatherapi.com/v1";
   const userLocation = useLocation();
 
   useEffect(() => {
