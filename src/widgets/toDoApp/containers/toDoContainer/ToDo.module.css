@@ -1,0 +1,280 @@
+.ToDoContainer{
+    border-radius: 20px;
+    background: rgb(45,45,45);
+    padding: 12px 30px;
+    color: white;
+    text-shadow: 1px 1px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/1/29/13;
+    min-width: 470px;
+}
+
+/*ToDoHeader ----------------------------------------------------------------------*/
+.ToDoHeader_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ToDoHeader_heading{
+    font-size: 28px;
+    margin: 10px 0 0 0;
+    padding-right: 60px;
+}
+.ToDoHeader_dropdown{
+    width: 100px;
+    height: 35px;
+    background: rgb(35,35,35);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+/*ToDoForm ---------------------------------------------------------------------------*/
+.toDoForm_formContainer{
+    width: 500px;
+    height: 500px;
+    background: rgb(18, 18, 18);
+    padding: 15px 20px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 4px solid rgb(104, 104, 104);
+}
+.toDoForm_firstInput{
+    width: 100%; 
+    height: 40px;
+    border: none;
+    background: rgb(47, 47, 47);
+    color: white;
+    padding-left: 13px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.toDoForm_textarea{
+    width: 100%;
+    height: 80px;
+    border-radius: 8px;
+    border: none;
+    background: rgb(47, 47, 47);
+    color: white;
+    padding: 10px 10px;
+    margin-bottom: 12px;
+}
+.toDoForm_inputGroup{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(47, 47, 47);
+    padding-left: 10px;
+    border-radius: 7px;
+    height: 40px;
+}
+.toDoForm_input{
+    width: 45%;
+    height: 100%;
+    border: none;
+    color: white;
+    padding-left: 13px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+.toDoForm_btnContainer{
+    width: 45%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 0;
+    background: rgb(44,44,44);
+}
+.toDoForm_dateButton{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: rgb(44,44,44);
+    border: none;
+    border-radius: 8px;
+}
+.toDoForm_datepicker{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background: rgb(44,44,44);
+    color: white;
+    font-size: 14px;
+    margin-right: 25px;
+    border-radius: 8px;
+}
+.toDoForm_datepicker:focus{
+    border: none;
+    outline: none;
+}
+.toDoForm_submitButton{
+    color: white;
+    width: 60%;
+    background-color: rgb(62, 73, 94);
+    border-radius: 8px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 19px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+}
+.toDoForm_createTaskButtonContainer{
+    position: absolute;
+    bottom: 1%;
+    left: 2%;
+    background: rgb(107, 80, 80);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+.toDoForm_createTaskButtonContainer:hover{
+    background: rgb(136, 88, 88);
+    cursor: pointer;
+    
+}
+.toDoForm_createTaskButton{
+    font-size: 30px;
+}
+.toDoForm_submit_closeButton_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toDoForm_formCloseButton{
+    color: white;
+    padding: 5px 15px;
+    background: rgb(57, 36, 36);
+    border-radius: 7px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+/*ToDoBody --------------------------------------------------------------------------*/
+.toDoBody_tasksContainer{
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.toDoBody_tasksContainer::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+
+.toDoBody_tasksContainer::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf; /* Color of the thumb (the draggable part) */
+    border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+.toDoBody_tasksContainer::-webkit-scrollbar-track {
+    background-color: #333; /* Color of the track (the non-draggable part) */
+}
+
+/*ToDoTask ---------------------------------------------------------------------------*/
+.toDoTask_tasksContainer{
+    padding: 0;
+}
+.toDoTask_taskIsDone{
+    text-decoration:line-through;
+    list-style: none;
+}
+.toDoTask_taskParagraphContainer{
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.toDoTask_task{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    min-height: 30px; 
+    overflow-wrap: break-word;
+}
+.toDoTask_priorityText{
+    font-size: 12px;
+}
+.toDoTask_taskContainer{
+    padding: 0px 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.toDoTask_taskContainerEditing{
+    background: rgba(0,0,0,0.15);
+    padding: 0px 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 3px solid #e4b660;
+}
+.toDoTask_taskMainTextContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.toDoTask_taskAdditionalTextContainer{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin-top: -15px;
+    height: 30px;
+    font-size: 12px;
+}
+.toDoTask_taskAdditionalTextContainer p {
+    margin: 0 0 0 33px;
+    letter-spacing: 0.75px;
+}
+.toDoTask_taskTextContainer{
+    width: 80%;
+    background-color: grey;
+    border: solid yellow
+}
+.toDoTask_input{
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 18px;
+    background: transparent;
+    color: white;
+}
+
+.toDoTask_editIcon{
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.401);
+}
+.toDoTask_deleteIcon{
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.401);
+}
+input.checkboxInput{
+    width: 16px;
+    height: 16px;
+}
+.toDoTask_noTasksHeading{
+    margin-top: 50px;
+    letter-spacing: 1px;
+    font-weight: normal;  
+}

@@ -1,0 +1,114 @@
+.container {
+    height: 200px;
+    background-color: rgb(37,37,37);
+    border-radius: 14px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media only screen and (max-width: 1550px) {
+  .container{
+    padding: 20px 40px ;
+  }
+}
+  .containerError{
+    width: 610px;
+    height: 200px;
+    background-color: rgb(47, 14, 14);
+    border-radius: 14px;
+    margin-top: 15px; 
+    margin-left: 40px;  
+    padding: 20px 10px;
+  }
+  .button{
+    color: rgb(162, 162, 162);
+    transition: all 0.2s ease;
+  }
+  .button:hover{
+    color: white;
+  }
+  .heading{
+    position: absolute;
+    margin-bottom: 180px;
+    color: rgb(226, 226, 226);
+  }
+  .loadingText{
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+    letter-spacing: 1px;
+  }
+  .errorText{
+    color: rgb(230, 151, 151);
+    font-size: 30px;
+  }
+  .subErrorText{
+    color: white;
+    font-size: 18px;
+  }
+  .page{
+    position: absolute;
+    margin-bottom: 130px;
+    color: rgb(159, 159, 159);
+    font-size: 14px ;
+  }
+  .country{
+    position: absolute;
+    margin-top: 165px;
+    margin-left: -5px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 2px;
+    text-shadow: 0.5px 0.5px black;
+  }
+
+  /*NewsCell ------------------------------------------------------------------------------------------------------*/
+  .newsCell_container{
+    color: white;
+    height: 90%;
+    width: 90%;
+    overflow-y: scroll;
+    padding: 5px 10px;
+  }
+  .newsCell_container::-webkit-scrollbar {
+    width: 4px; 
+  }
+
+  .newsCell_container::-webkit-scrollbar-track {
+    background-color: #111111; 
+  }
+  
+  .newsCell_container::-webkit-scrollbar-thumb {
+    background-color: #b4b4b4; 
+    border-radius: 6px; 
+  }
+  
+  .newsCell_container::-webkit-scrollbar-thumb:hover {
+    background-color: #e7e7e7; 
+  }
+  .newsCell_heading{
+    font-size: 22px;
+    margin: 0;
+  }
+  .newsCell_link{
+    margin: 0;
+    padding-right: 30px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: space-between;
+  }
+  .newsCell_dateParagraph{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    color: rgb(175, 175, 175);
+  }
+  .newsCell_date{
+    font-weight: normal;
+    color: rgb(190, 190, 190);
+  }

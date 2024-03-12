@@ -1,0 +1,285 @@
+.container {
+  width: 50%;
+  min-width: 750px;
+  height: 720px;
+}
+
+/*HabitTrackerContainer ----------------------------------------------------------------------------*/
+.habit_tracker_container_container {
+  width: 100%;
+  height: 718px;
+}
+.habit_tracker_container_showFormButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(62, 98, 58);
+  color: white;
+  font-size: 46px;
+  margin: -70px 0 0 15px;
+}
+
+/*HabitTrackerBody -------------------------------------------------------------------------------------*/
+.habit_tracker_body {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(47, 47, 47);
+  color: white;
+  border-radius: 0 0 12px 12px;
+}
+
+/*HabitTrackerHeader -----------------------------------------------------------------------------------*/
+.habit_tracker_header {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  display: flex;
+  align-items: flex-end;
+}
+.habit_tracker_header_headingContainer {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  padding: 0 0 0px 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.habit_tracker_header_headingContainer h2 {
+  margin: 0 0 -5px 0;
+}
+.habit_tracker_header_listContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 40px 20px 40px;
+  list-style: none;
+  width: 75%;
+  margin: 0;
+}
+
+/*Habit -------------------------------------------------------------------------------------------------*/
+.habit_container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+}
+.habit_container:hover {
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+}
+.habit_habitInfoIcon {
+  width: 2.5%;
+  padding-left: -20px;
+  overflow: hidden;
+  height: 55%; 
+  background-color: rgb(37, 37, 37);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.habit_habitInfoIcon svg {
+  transform: scale(0.85);
+}
+.habit_habitName {
+  width: 22.5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  padding: 0 50px 0 10px;
+}
+.habit_habitInfoIcon:hover + .habit_habitDescription {
+  display: flex;
+}
+.habit_habitDescription {
+  display: none;
+  padding-left: 20px;
+  align-items: center;
+  width: 400px;
+  height: 50px;
+  z-index: 1;
+  position: absolute;
+  color: rgb(207, 207, 207);
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  margin-left: -80px;
+  overflow: hidden;
+}
+
+.habit_checkboxesContainer {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*HabitForm ---------------------------------------------------------------------------------------------*/
+.habit_form_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  padding: 20px 16px;
+  border-radius: 12px;
+  right: 0;
+}
+.habit_form_inputs {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.habit_form_inputs:focus {
+  outline: none;
+  border-bottom: 1px solid whitesmoke;
+}
+.habit_form_selectColorContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(50, 50, 50);
+  color: white;
+  padding: 0px 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+}
+.habit_form_colorDropDown {
+  width: 40%;
+  height: 100%;
+  padding: 12px 8px;
+  background: rgb(40, 40, 40);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  margin-right: -12px;
+  text-align: center;
+  font-size: 15px;
+}
+.habit_form_daysContainer {
+  display: flex;
+  align-items: center;
+}
+.habit_form_individualDaysContainer {
+  color: white;
+  background: rgb(50, 50, 50);
+  width: 100%;
+  padding: 12px 14px;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+}
+.habit_form_dialog {
+  width: 350px;
+  height: 125px;
+  background-color: rgb(192, 158, 117);
+  border: 2px solid rgb(60, 40, 19);
+  border-radius: 6px;
+  text-align: center;
+}
+.habit_form_dialogBtn {
+  background: rgb(50, 47, 47);
+  color: white;
+  padding: 8px 14px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+}
+.habit_form_labelButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(50, 50, 50);
+  padding: 8px 12px;
+}
+.habit_form_daysButton {
+  background-color: rgb(35, 108, 35);
+  color: rgb(216, 216, 216);
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  max-width: 225px;
+  overflow-x: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.habit_form_daysButton:hover {
+  cursor: pointer;
+  background-color: rgb(12, 93, 12);
+  color: white;
+}
+.habit_form_buttonsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 17px;
+}
+.habit_form_submitButton {
+  color: white;
+  width: 66%;
+  padding: 8px 0px;
+  background-color: rgb(38, 38, 84);
+  font-size: 18px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.habit_form_submitButton:hover {
+  background-color: rgb(38, 38, 128);
+}
+.habit_form_closeButton {
+  color: white;
+  width: 100px;
+  border: none;
+  background: grey;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/*Checkbox ---------------------------------------------------------------------------------------------*/
+.checkbox_input:checked {
+  background-color: yellow;
+}
+.checkbox_input:disabled {
+  visibility: hidden;
+}
+.checkbox_input {
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 2px black;
+}
+.checkbox_inputContainer {
+  padding: 0;
+  filter: grayscale(1);
+}
+
+
+
+
+@media only screen and (max-width: 1550px) {
+  .container{
+      width: 90%;
+      max-width: 1100px;
+  }
+}
+@media only screen and (max-width: 1100px){
+  .habit_container{
+    height: 70px;
+   }  
+   .habit_habitDescription{
+    height: 70px;
+   }
+   .habit_habitInfoIcon{
+    height: 38%;
+   }
+}

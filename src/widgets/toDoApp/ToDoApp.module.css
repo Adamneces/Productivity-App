@@ -1,0 +1,210 @@
+.appContainer{
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(28, 1fr);
+    width: 50%;
+    min-width: 750px;
+    height: 720px;
+    position: relative;
+    gap: 12px;
+} 
+@media only screen and (max-width: 1550px) {
+    .appContainer{
+        width: 90%;
+        max-width: 1100px;
+        grid-template-columns: repeat(19, 1fr);
+        margin-bottom: 15px;
+    }   
+}
+
+/*DailyTracker -------------------------------------------------------------------------------------*/
+.daily_tracker_container{
+    border-radius: 10px;
+    grid-area: 20/13/29/20;
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 15px 20px;
+    min-width: 250px;
+}
+.daily_tracker_headingContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+.daily_tracker_lineContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.daily_tracker_progressContainer{
+    width: 100%;
+    padding: 0;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+.daily_tracker_progressBar{
+    margin: 0;
+    height: 100%;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.daily_tracker_everythingCompleted{
+    animation: daily_tracker_completed 0.6s;
+}
+
+@keyframes daily_tracker_completed {
+    0% {
+        box-shadow: none;
+    }
+    25% {
+        box-shadow: 1px 1px 15px rgb(159, 255, 123);
+    }
+    50% {
+        box-shadow: none;
+    }
+    75% {
+        box-shadow: 1px 1px 15px rgb(159, 255, 123);
+    }
+    100% {
+        box-shadow: none;
+    }
+}
+
+/*InfoWidget ----------------------------------------------------------------------------------------*/
+.info_widget_container {
+    grid-area: 13/13/20/20;
+    background: rgb(38, 38, 38);
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.info_widget_container::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+
+.info_widget_container::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf; /* Color of the thumb (the draggable part) */
+    border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+.info_widget_container::-webkit-scrollbar-track {
+    background-color: #333; /* Color of the track (the non-draggable part) */
+}
+.info_widget_heading{
+    font-size: 18px;
+    margin: 0;
+}
+.info_widget_currentTemperature{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+}
+.info_widget_infoContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5px 0 10px 0; 
+}
+.info_widget_icon{
+    width: 55px;
+    height: auto;
+    margin-top: -5px;
+    filter: contrast(1.3);
+}
+.info_widget_forecastContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+.info_widget_forecastDayContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.info_widget_forecastIcon{
+    width: 33px;
+    margin-bottom: 5px;
+    height: auto;
+    filter: grayscale(0.6);
+}
+.info_widget_forecastTemp{
+    font-size: 14px;
+}
+.info_widget_forecastDay{
+    font-size: 14px;
+    margin: 0;
+}
+.info_widget_forecast_day_icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info_widget_minTemp{
+    color: rgb(139, 139, 139);
+}
+
+/*Tracker ---------------------------------------------------------------------------------------------*/
+.tracker_trackerContainer {
+    grid-area: 1/13/13/20;
+    left: 510px;
+    background: rgb(45, 45, 45);
+    color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+  }
+  .tracker_trackerLineContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    font-size: 16px;
+  }
+  .tracker_progressBarContainer {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  .tracker_progressBar {
+    height: 100%;
+    background: rgb(95, 181, 84);
+    border-radius: 8px;
+    transition: all 0.25s ease;
+  }
+  
+  @keyframes trackerBarAnimation {
+    0% {
+      box-shadow: none;
+    }
+    15% {
+      box-shadow: 1px 1px 15px rgb(159, 255, 123);
+    }
+    30% {
+      box-shadow: none;
+    }
+    45% {
+      box-shadow: 1px 1px 15px rgb(159, 255, 123);
+    }
+    60% {
+      box-shadow: none;
+    }
+    75% {
+      box-shadow: 1px 1px 15px rgb(159, 255, 123);
+    }
+    100% {
+      box-shadow: none;
+    }
+  }
+  .tracker_animateComplete {
+    animation: trackerBarAnimation 0.75s;
+  }
+  

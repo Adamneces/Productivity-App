@@ -1,0 +1,290 @@
+/*TimerWidget  --------------*/
+.container {
+  height: 200px;
+  background-color: rgb(35, 35, 35);
+  border-radius: 14px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 1550px) {
+  .container{
+    justify-content: space-evenly;
+  }
+}
+
+.animation {
+  background: linear-gradient(270deg, #753b3b, #315f31, #324762);
+  background-size: 600% 600%;
+
+  -webkit-animation: BackgroundAnimation 12s ease infinite;
+  -moz-animation: BackgroundAnimation 12s ease infinite;
+  animation: BackgroundAnimation 12s ease infinite;
+}
+/* Button ------------------------------------------------------------*/
+.button{
+  color: white;
+  font-size: 15px;
+  min-width: 55px;
+  max-width: 65px;
+  padding: 8px 2px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.button:disabled{
+  color: #4b4b4b;
+}
+
+/*SelectDropDown ---------------------------------------------------------*/
+.select_dropdown_labelSelect{
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+.select_dropdown_labelSelect label{
+  color: white;
+}
+.select_dropdown_labelSelect select{
+  padding: 6px 10px;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+}
+.select_dropdown_labelSelect select:focus{
+  outline: none;
+  border-left: 2px solid rgb(202, 202, 202)
+}
+.select_dropdown_labelSelect select::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+.select_dropdown_labelSelect select::-webkit-scrollbar-thumb {
+  background-color: #989898; /* Color of the thumb (the draggable part) */
+  border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+.select_dropdown_labelSelect select::-webkit-scrollbar-track {
+  background-color: #333; /* Color of the track (the non-draggable part) */
+}
+
+/*TimerFinished  ------------------------------------------------------*/
+.timer_finished_container{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.timer_finished_heading{
+  font-size: 50px;
+  color: rgb(203, 203, 203);
+  letter-spacing: 1px;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+}
+.timer_finished_backButton{
+  color: rgb(210, 210, 210);
+  font-size: 20px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: rgb(63, 63, 63);
+  margin-right: 20px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.192);
+  transition: background-color 0.3s ease;
+}
+.timer-finished-backButton:hover{
+  background-color: rgb(85, 80, 38);
+  border-bottom: 1px solid rgb(149, 149, 149);
+  color: white;
+}
+
+/*Sounds --------------------------------------------------------------*/
+.sounds_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  overflow-x: hidden;
+}
+.sounds_heading{
+  margin: 8px 0 0 0;
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+}
+.sounds_sound{
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+.sounds_selectSound{
+  padding: 6px 0px;
+  text-align: center;
+  color: white;
+  outline: none;
+  border-radius: 8px;
+  background-color: rgb(50, 35, 14);
+}
+.sounds_selectSound:active{
+  border: 1px solid rgb(90, 63, 26);
+  outline: none;
+}
+/*Rounds ------------------------------------------------------------*/
+.rounds_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.rounds_heading{
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+  margin: 8px 0 0 0;
+}
+.rounds_roundsDisplay{
+  color: white;
+  font-size: 36px;
+  margin: 0;
+}
+.rounds_inputIconsContainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.rounds_inputIconsContainer span{
+  padding: 2px 24px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgb(99, 99, 99);
+  color: white;
+  text-shadow: 0.5px 0.5px black;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/*Timer ----------------------------------------------------------------------*/
+.timer_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.timer_heading{
+    font-size: 32px;
+    margin: 0 0 -10px 0;
+    color: white;
+    font-weight: normal;
+}
+.timer_time {
+  font-size: 55px;
+  margin: 0;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.timer_labelSelectContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+.timer_buttonsContainer {
+  display: flex;
+}
+
+/*BreakTimer ---------------------------------------------------------------------*/
+.break_timer_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.break_timer_heading{
+    font-size: 32px;
+    margin: 0 0 -10px 0;
+    color: white;
+    font-weight: normal;
+}
+.break_timer_time {
+  font-size: 55px;
+  margin: 0;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.break_timer_labelSelectContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/*animation ---------------------------------------------------------------------------------------*/
+
+@-webkit-keyframes BackgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes BackgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes BackgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media only screen and (max-width: 1750px){
+  .timer_time{
+    font-size: 47px;
+  }
+  .break_timer_time{
+    font-size: 47px;
+  }
+  .rounds_roundsDisplay{
+    font-size: 32px;
+  }
+  .sounds_sound{
+    font-size: 17px;
+  }
+}
