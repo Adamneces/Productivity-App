@@ -8,7 +8,7 @@ import WeatherDisplay from "../UI/WeatherDisplay";
 const InfoWidget = () => {
   const [weatherData, setWeatherData] = useState(null);
 
-  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const baseUrl = "https://api.weatherapi.com/v1";
   const userLocation = useLocation();
 
@@ -45,11 +45,7 @@ const InfoWidget = () => {
           <WeatherDisplay weatherData={weatherData} />
           <div className={styles.info_widget_forecastContainer}>
             {weatherData.forecast.forecastday.map((forecastDay, index) => (
-              <ForecastIcon
-                key={index}
-                forecastDay={forecastDay}
-                index={index}
-              />
+              <ForecastIcon key={index} forecastDay={forecastDay} index={index} />
             ))}
           </div>
         </>

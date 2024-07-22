@@ -10,6 +10,8 @@ const ToDoTask = ({ toDos }) => {
   const sortedToDos = toDos.sort(createSortingFunction(filterTasks));
   const filteredTasks = filterTasksByDate(displayTasks, sortedToDos);
 
+  console.log(sortedToDos)
+
   return (
     <ul className={styles.toDoTask_tasksContainer}>
       {filteredTasks.length > 0 ? (

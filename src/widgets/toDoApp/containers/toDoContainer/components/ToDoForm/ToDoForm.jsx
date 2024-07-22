@@ -46,10 +46,8 @@ const ToDoForm = ({ setToDos }) => {
   function createTheTask() {
     setToDos((prev) => [
       ...prev,
-      {
-        ...newTask,
-        taskID: uuidv4(),
-      },
+      { ...newTask,
+        taskID: uuidv4(),},
     ]);
   }
 

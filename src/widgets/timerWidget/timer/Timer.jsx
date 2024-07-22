@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "../TimerWidget.module.css";
 import SelectDropdown from "./components/SelectDropDown";
-import { sixtyArray, hoursArray } from "../utilities/utilities.js";
+import { sixtyArray, hoursArray } from "../utilities/utilities.jsx";
 import Button from "../UI/Button.jsx";
 
 import TimerContext from "../store/TimerContext.jsx";

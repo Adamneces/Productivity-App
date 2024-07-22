@@ -1,6 +1,5 @@
 import styles from "../../ToDo.module.css";
 import backgroundColors from "../../../../utilities/backgroundColors";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPenToSquare,
@@ -9,7 +8,7 @@ import {
   faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import { formatDate } from "../../../../utilities/utilities";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import TaskContext from "../../store/TaskContext";
 
 const Task = ({ task, index }) => {
@@ -23,10 +22,11 @@ const Task = ({ task, index }) => {
     handleEditTask,
     handleFinishTask,
   } = useContext(TaskContext);
-  
+  const [showDescription, setShowDescription] = useState(false);
+
   const today = new Date();
-  let tomorrow = new Date(today);
-  tomorrow.setDate(today.getDate() + 1);
+  const tomorrow = new Date(today.setDate(today.getDate() + 1));
+
 
   return (
     <div
@@ -100,12 +100,8 @@ const Task = ({ task, index }) => {
           <>
             <button
               onClick={() => {
-                if (task.isEditing) {
-                  handleEditTask(index);
-                } else {
-                  handleIsEditing(index);
-                  setEditedTaskIndex(index);
-                }
+                task.isEditing ? handleEditTask(index) : handleIsEditing(index);
+                setEditedTaskIndex(index);
               }}
             >
               {task.isEditing ? (
@@ -132,6 +128,7 @@ const Task = ({ task, index }) => {
       {!task.taskIsDone && !task.isEditing && (
         <div className={styles.toDoTask_taskAdditionalTextContainer}>
           <p>
+            
             {formatDate(task.date) === formatDate(today)
               ? "today"
               : formatDate(task.date) === formatDate(tomorrow)
@@ -139,6 +136,17 @@ const Task = ({ task, index }) => {
               : formatDate(task.date)}
           </p>
           <p>{task.time}</p>
+          <p
+            onClick={() => setShowDescription((prev) => !prev)}
+            className={styles.toDoTask_showDescription}
+          >
+            {showDescription ? 'close' : 'description'}
+          </p>
+          {showDescription && (
+            <div className={styles.toDoTask_description}>
+              <h4>{task.description}</h4>
+            </div>
+          )}
         </div>
       )}
     </div>
